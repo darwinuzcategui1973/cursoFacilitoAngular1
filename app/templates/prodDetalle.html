@@ -1,0 +1,57 @@
+<div class="section">
+	<div class="columns">
+		
+		<div class="column is-5">
+			<div class="image is-2by2">
+				<img ng-src="./img/imagen.jpg">
+
+
+			</div>
+		</div>
+		<div class="column is-7"></div>
+		<h1 class="subtitle is-5">{{pc.prod.titulo}}</h1>
+		<p class="has-text-muted subtitle is-5">
+			{{pc.prod.precio|currency:" Bs "}} 
+		</p>
+		<hr>
+		<p>
+			<span class="tag is-primary">
+				{{pc.prod.cat.text}}
+				
+
+			</span>
+
+			<span class="tag is-info" style="float:right">
+				{{pc.prod.cat.text}}
+					<br>
+
+			</span>
+			 <br>
+				<p class="has-text-muted">
+
+				<a class="button is-danger" ng-click="pc.onDelete(pc.prod.$id)">Eliminar</a>
+				<a class="button is-warning" href="#" ui-sref="products.editar({prod_id:pc.prod.$id})">Editar</a>
+				<br>
+
+					{{pc.prod.desc}}
+					
+				</p>
+					
+
+		</p>
+
+		
+
+	</div>
+
+
+
+
+	<!--
+	<a  ng-click="pc.onDelete(pc.prod.$id)">Eliminar</a>
+	<a href="#" ui-sref="products.editar({prod_id:pc.prod.$id})">Editar</a>
+	<!--<p>{{pc.prod.time_add|date}}</p>
+	<p> {{pc.prod.cat.text}}</p>
+	<p>{{pc.prod.desc}}
+	<p>{{pc.prod.precio|currency}}</p>	
+-->

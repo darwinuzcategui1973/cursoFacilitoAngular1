@@ -1,0 +1,81 @@
+
+<div class="container">
+	<div class="columns is vcentered"> 
+	 <div class="column is-4 is-offset-4">
+
+		<form class="box" name="formularioAgregarProducto" ng-submit="pac.onSubmit()">
+		<h1 class="title is-3 has-text-centered">Agregar Productos</h1>
+			<label>Titulo</label>
+			<p class="control">
+				<input 
+				type="text" 
+				name="titulo"
+				class="input is-medium" 
+				ng-model="pac.prod.titulo"
+				required="required" 
+				placeholder="Ingrese Titulo"
+				>
+			</p>
+			<label for="">Precio</label>	
+			<p class="control">
+				<input 
+				type="text" 
+				name="precio" 
+				class="input is-medium" 
+				ng-model="pac.prod.precio"
+				required="required" 
+				placeholder="Ingresa Precio">
+			</p>	
+
+			<!--{{pac.categorias|json}} -->
+			<label for ="">Categoria</label>
+			<p class="control">
+				<span class="select is-fullwidth is-medium">
+
+
+					<select
+					   class="select is-medium"
+					   name="cat"
+			   	       ng-model="pac.prod.cat"
+			   	       required="required" 
+			   	       ng-options="cat.text for cat in pac.categorias"
+			   	    
+			   	    	<option value="nodejs">NODEJS</option>
+
+			   	    </select>
+		   	    </span>
+			</p>
+			
+			<p class="control">
+			<label>Descripción</label>
+			
+				<textarea 
+					name ="desc" 
+					class="textarea is-medium" 
+					ng-model="pac.prod.desc"
+					required="required" 
+					placeholder="Ingresa Descripción"></textarea>	
+
+			</p>
+
+			<p class="control">
+
+				<button 
+					type="submit"
+					class="button is-primary is-medium is-fullwidth" 
+				 	ng-disabled="formularioAgregarProducto.$invalid">Agregar Productos</button>
+
+			 </p>
+		
+
+		</form>
+
+
+
+	 	
+	 </div>
+
+	</div>
+
+</div>
+

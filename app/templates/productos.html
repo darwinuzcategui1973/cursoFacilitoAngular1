@@ -1,0 +1,77 @@
+
+<div class="container">
+
+<div class="columns">
+
+	<div class="column is-5">
+		<div class="box">
+
+		<div class="media" style="cursor:pointer" 
+		ng-repeat="prod in pc.products" ui-sref="products.producdetalle({prod_id:prod.$id})"
+ ui-sref-active="ui-activo"> 
+		
+				<div class="media-left">
+					<p class="image is-64x64">
+						<img ng-src="./img/imagen.jpg">
+					</p>
+					
+				</div>
+				<div class="media-content">
+					<p>
+						<strong>{{prod.titulo}}</strong>
+						<span class="tag is-primary is-small"
+						style="float:right">{{prod.cat.text}}</span>
+						<br><br>
+						{{prod.desc|limitTo:100}}
+						
+					</p>
+
+				</div>
+				
+
+			</div >
+			
+
+		</div>
+		
+
+	</div>
+	<div class="column is-7">
+		<ui-view name="detalleProd"></ui-view>
+		<div class="box">
+		<!-- directiva ui-view con un nombre-->
+ 
+		
+
+	</div>
+	</div>
+
+
+</div>
+
+</div>
+
+<!--
+
+<h1 class="title">Productos</h1> -->
+
+ <!--- {{pc.products}} -->
+
+<!-- va iterar el arreglo producto es como un for eat
+ 
+ <div ng-repeat="prod in pc.products" 
+ ui-sref="products.producdetalle({prod_id:prod.$id})"> 
+ -->
+
+ 	                               <!-- directiva ui-sref para mandarlo por el Id de cada productos aqui decimos que lo vamos a mandar a estado product.detalleProd  le vamos a pornewr nombre prod_id y le mandamos el id de cada producto o key-->     
+<!--
+ 	{{prod.$id}}
+ 	<h2 class="titulo">{{prod.titulo}}</h2>
+ 	<p>{{prod.desc}}
+ 		<!--delimita el contenido con una separacio <hr> 
+    <hr> 
+ </div>
+-->
+
+ 
+

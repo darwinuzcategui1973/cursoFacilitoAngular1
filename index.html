@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Angular Fire</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--
+	<link rel="stylesheet" " href="./bower_components/bulma/css/bulma.css">
+-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.css">
+   
+    <style> 
+    .ui-activo{
+    color: #00d1b2;
+              }
+    </style>
+
+</head>
+<body ng-app="LetCodeApp">
+
+	<nav class="nav">
+		<nav class="nav-left">
+			<a href="#" class="nav-item is-brand">
+				<h1 class="title is-3">Productos App</h1>
+						</a>
+
+		</nav>
+		<nav class="nav-right">
+			<a href="#" class="nav-item" ui-sref="products">
+
+					<span class="icon is.small">
+					<i class="fa fa-gift"> </i>
+					
+				</span>
+				  <span>
+				  	 Productos 
+				  </span>
+
+
+
+
+			</a>
+	        <a href="#" class="nav-item" ui-sref="productadd">
+
+	       <span class="icon is.small">
+					<i class="fa fa-plus-circle"> </i>
+					
+				</span>
+				  <span>
+				  	 Agregar 
+				  </span>
+				</a>
+			
+
+
+		</nav>
+		
+	</nav>
+	
+	<br>
+
+
+<!-- Directiva que sirver para el contenedor de 
+	 de  la vista eny los estado ng-app angular -->
+<ui-view></ui-view>
+
+<!--	{{90+10}} -->
+	<br>
+	<br>
+
+
+<!-- Directiva para navegar esntre estado de angular -->
+<!--
+<a href="#" ui-sref="products">Productos </a>
+<a href="#" ui-sref="productadd">Agregar Productos</a>
+-->
+<br>
+
+
+
+	
+	<!-- Version version minimna de angular -->
+
+	<script src="./bower_components/angular/angular.min.js"></script>
+	<script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="./bower_components/firebase/firebase.js"></script>
+	<script src="./bower_components/angularfire/dist/angularfire.min.js"></script>
+	<script src="./app/app.js"></script>
+	
+
+</body>
+</html>

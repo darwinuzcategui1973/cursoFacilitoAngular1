@@ -1,0 +1,80 @@
+<div class="container">
+	<div class="columns is vcentered"> 
+	 <div class="column is-7 is-offset-0.5">
+
+		<form class="box" name="formularioEditarProducto" ng-submit="pec.onSubmit()">
+		<h1 class="title is-3 has-text-centered">Editar Productos</h1>
+			<label>Titulo</label>
+			<p class="control">
+				<input 
+				type="text" 
+				name="titulo"
+				class="input is-medium" 
+				ng-model="pec.prod.titulo"
+				required="required" 
+				placeholder="Ingrese Titulo"
+				>
+			</p>
+			<label for="">Precio</label>	
+			<p class="control">
+				<input 
+				type="text" 
+				name="precio" 
+				class="input is-medium" 
+				ng-model="pec.prod.precio"
+				required="required" 
+				placeholder="Ingresa Precio">
+			</p>	
+
+			<!--{{pac.categorias|json}} -->
+			<label for ="">Categoria</label>
+			<p class="control">
+				<span class="select is-fullwidth is-medium">
+
+
+					<select
+					   class="select is-medium"
+					   name="cat"
+			   	       ng-model="pec.prod.cat"
+			   	       required="required" 
+			   	       ng-options="cat.text for cat in pec.categorias"
+			   	    
+			   	    	<option value="nodejs">NODEJS</option>
+
+			   	    </select>
+		   	    </span>
+			</p>
+			
+			<p class="control">
+			<label>Descripción</label>
+			
+				<textarea 
+					name ="desc" 
+					class="textarea is-medium" 
+					ng-model="pec.prod.desc"
+					required="required" 
+					placeholder="Ingresa Descripción"></textarea>	
+
+			</p>
+
+			<p class="control">
+
+				<button 
+					type="submit"
+					class="button is-primary is-medium is-fullwidth" 
+				 	ng-disabled="formularioEditarProducto.$invalid">Actulizar Productos</button>
+
+			 </p>
+		
+
+		</form>
+
+
+
+	 	
+	 </div>
+
+	</div>
+
+</div>
+
